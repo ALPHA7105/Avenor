@@ -110,7 +110,14 @@
             transform: translateY(-5px); 
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .product-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .product-card img {
+            width: 80%;          /* shrink image to 80% of card width */
+            max-width: 250px;    /* optional: limit maximum width */
+            height: auto;        /* maintain aspect ratio */
+            border-radius: 10px; /* rounded corners like About image */
+            margin: 0 auto 15px auto; /* center image and add space below */
+            display: block;      /* ensures centering works */
+        }
         .product-card h3 { 
             font-family: 'Playfair Display', serif; 
             font-size: 1.3rem; 
