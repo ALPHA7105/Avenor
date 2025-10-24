@@ -61,61 +61,109 @@
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            height: 60vh;
-            border-radius: 10px;
-            overflow: hidden;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            background-color: #fffdf3;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 20px;
         }
-        
-        /* the background image */
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
+
+        /* main layout container */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* brand name + logo area */
+        .brand-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .brand-title img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .brand-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #5c4a26;
+            letter-spacing: 2px;
+        }
+
+        /* slogan area with background image */
+        .slogan-area {
+            position: relative;
             background: 
-                linear-gradient(rgba(255, 247, 222, 0.3), rgba(0, 0, 0, 0.4)),
+                linear-gradient(rgba(255, 250, 230, 0.2), rgba(0,0,0,0.4)),
                 url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1350&q=80')
                 no-repeat center center / cover;
-            z-index: 1;
-            border-radius: 10px;
-        }
-
-        /* the text layer */
-        .hero-text {
-            position: relative;
-            z-index: 2;  /* ensures text is above image */
-            color: #fffdf5;
-            padding: 0 20px; /* small padding for phones */
-        }
-
-        .hero-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            background-color: rgba(0,0,0,0.35);
-            padding: 15px 25px;
             border-radius: 12px;
+            padding: 40px 20px;
+            color: #fffdf5;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .hero-text p {
-            margin-top: 15px;
+        .slogan-area .tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .slogan-area .desc {
             font-size: 1.1rem;
-            letter-spacing: 0.5px;
-            color: #f9f6ef;
+            letter-spacing: 0.4px;
         }
 
+        /* --- Responsive Tweaks --- */
         @media(max-width: 768px) {
+            /* hide 'Avènor' in navbar for phones */
+            header .logo {
+                display: none;
+            }
+
             .hero {
-                height: 50vh; /* slightly smaller on mobile */
+                height: auto;
+                padding: 40px 20px;
             }
-            .hero-text h1 {
-                font-size: 2.2rem;
-                padding: 10px 15px;
+
+            .brand-title h1 {
+                font-size: 3rem;
             }
-            .hero-text p {
-                font-size: 1rem;
+
+            .brand-title img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .slogan-area {
+                padding: 25px 15px;
+            }
+
+            .slogan-area .tagline {
+                font-size: 1.6rem;
+            }
+
+            .slogan-area .desc {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media(max-width: 450px) {
+            .brand-title h1 {
+                font-size: 2.5rem;
             }
         }
 
@@ -205,10 +253,16 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Style that Sustains</h1>
-            <p>Crafted with nature, designed for timeless harmony.</p>
+      <div class="hero-content">
+        <div class="brand-title">
+          <img src="Images/Avenor_final_logo.png" alt="Avènor Logo">
+          <h1>Avènor</h1>
         </div>
+        <div class="slogan-area">
+          <p class="tagline">Style that Sustains</p>
+          <p class="desc">Crafted with nature, designed for timeless harmony.</p>
+        </div>
+      </div>
     </section>
 
     <!-- About -->
