@@ -139,16 +139,28 @@
             color: #f9f6ef;
         }
 
+        /*
         .hero-title {
-            display: flex;                /* use flex to align children */
-            justify-content: center;      /* center logo + heading horizontally */
-            align-items: center;          /* center vertically */
-            gap: 20px;                    /* space between logo and heading */
-            padding: 3rem 1rem 1.2rem;   /* keep your spacing */
+            display: flex;                /* use flex to align children */ /*
+            justify-content: center;      /* center logo + heading horizontally */ /*
+            align-items: center;          /* center vertically *//*
+            gap: 20px;                    /* space between logo and heading *//*
+            padding: 3rem 1rem 1.2rem;   /* keep your spacing *//*
             background-color: transparent;
-            text-align: left;             /* remove old centering that conflicts */
+            text-align: left;             /* remove old centering that conflicts *//*
         }
+        
+        */
 
+        .hero-title {
+            display: flex;                /* flex container */
+            flex-direction: row;          /* default, side by side */
+            justify-content: center;      /* center horizontally */
+            align-items: center;          /* center vertically */
+            gap: 20px;                    /* spacing between logo and text */
+            padding: 3rem 1rem 1.2rem;   
+        }
+        
         .hero-logo {
             width: 72px;
             height: auto;
