@@ -1,1 +1,5 @@
-# Avenor
+Avenor is a lifestyle home décor brand dedicated to creating serene, mindful spaces while caring for the planet. Every product reflects a commitment to sustainability, natural materials, and timeless design, blending artisanal craftsmanship with modern minimalism. We focus on textures over color and light as a central element, bringing warmth and calm into everyday living.
+
+Our approach emphasizes low-impact production — small-batch, ethical manufacturing with minimal carbon footprint — and a circular mindset, ensuring products are reusable, repairable, or recyclable. Materials are eco-friendly and responsibly sourced, including organic cotton, sustainably harvested wood, and recycled metals, all packaged in biodegradable materials.
+
+Transparency is at the heart of our brand, sharing the story behind every item, and we actively collaborate with local artisans and makers, promoting fair trade and supporting community creativity. Designed to last beyond trends, our products encourage mindful, intentional living in every home.
