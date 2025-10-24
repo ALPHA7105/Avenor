@@ -28,34 +28,71 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 16px 40px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
+        /* Left side: logo + brand name */
         header .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             font-weight: 700;
             color: #5c4a26;
             letter-spacing: 1px;
+            text-transform: capitalize;
         }
 
-        nav a { 
-            margin-left: 25px; 
-            font-weight: 500; 
-            color: #5c4a26; 
-            transition: color 0.3s; 
+        .logo-img {
+            height: 44px;
+            width: auto;
+            object-fit: contain;
+            display: block;
         }
-        nav a:hover { color: #b68b40; }
 
+        /* Navigation links */
         header nav {
             display: flex;
-            flex-wrap: nowrap;       /* prevent wrapping */
-            justify-content: flex-end; 
-            gap: 20px;               /* space between links */
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: #5c4a26;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #b68b40;
+        }
+
+        /* Make header responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 14px 20px;
+            }
+            .logo-img {
+                height: 36px;
+            }
+            header .logo {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+            header nav {
+                gap: 18px;
+            }
+            nav a {
+                font-size: 0.95rem;
+            }
         }
 
         /* --- Hero Section --- */
@@ -251,10 +288,10 @@
 
     <!-- Hero -->
     <section class="hero-title">
-      <div class="logo">
-          <img src="Images/Avenor_final_logo.png" alt="Avènor Logo" class="logo-img">
-          <span>Avènor</span>
-        </div>
+      <div class="hero-content">
+        <img src="Images/Avenor_final_logo.png" alt="Avènor Logo" class="hero-logo">
+        <h1 class="hero-heading">Avènor</h1>
+      </div>
     </section>
     
     <section class="hero">
