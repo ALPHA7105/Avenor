@@ -61,109 +61,62 @@
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            height: 70vh;
+            height: 60vh;
+            border-radius: 10px;
+            overflow: hidden;  /* ensures rounded corners and hides overflow */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: #fffdf3;
-            border-radius: 12px;
-            overflow: hidden;
-            padding: 20px;
         }
 
-        /* main layout container */
-        .hero-content {
-            position: relative;
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;       /* fills hero while keeping aspect ratio */
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;              /* ensures text stays on top */
+        }
+
+        .hero-text {
+            position: relative;      /* ensures text sits above image */
             z-index: 2;
-        }
-
-        /* brand name + logo area */
-        .brand-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .brand-title img {
-            width: 70px;
-            height: 70px;
-        }
-
-        .brand-title h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: #5c4a26;
-            letter-spacing: 2px;
-        }
-
-        /* slogan area with background image */
-        .slogan-area {
-            position: relative;
-            background: 
-                linear-gradient(rgba(255, 250, 230, 0.2), rgba(0,0,0,0.4)),
-                url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1350&q=80')
-                no-repeat center center / cover;
-            border-radius: 12px;
-            padding: 40px 20px;
             color: #fffdf5;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .slogan-area .tagline {
+        .hero-text h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 2.6rem; /* same as before */
+            background-color: rgba(0,0,0,0.35);
+            padding: 15px 25px;
+            border-radius: 12px;
         }
 
-        .slogan-area .desc {
+        .hero-text p {
+            margin-top: 15px;
             font-size: 1.1rem;
-            letter-spacing: 0.4px;
+            letter-spacing: 0.5px;
+            color: #f9f6ef;
         }
 
-        /* --- Responsive Tweaks --- */
         @media(max-width: 768px) {
-            /* hide 'Avènor' in navbar for phones */
-            header .logo {
-                display: none;
+            .hero-text h1 {
+                font-size: 2.3rem;
+                padding: 10px 15px;
+            }        
+            .hero-text p {
+                font-size: 1rem;
             }
-
-            .hero {
-                height: auto;
-                padding: 40px 20px;
-            }
-
-            .brand-title h1 {
-                font-size: 3rem;
-            }
-
-            .brand-title img {
-                width: 55px;
-                height: 55px;
-            }
-
-            .slogan-area {
-                padding: 25px 15px;
-            }
-
-            .slogan-area .tagline {
-                font-size: 1.6rem;
-            }
-
-            .slogan-area .desc {
-                font-size: 0.95rem;
-            }
-        }
-
-        @media(max-width: 450px) {
-            .brand-title h1 {
-                font-size: 2.5rem;
+            .about { 
+                flex-direction: column; 
+                text-align: center; 
+            } 
+            .about img { 
+                width: 90%; /* fit better on smaller screens */ 
+                margin: auto; 
             }
         }
 
@@ -252,17 +205,19 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero-title">
       <div class="hero-content">
-        <div class="brand-title">
-          <img src="Images/Avenor_final_logo.png" alt="Avènor Logo">
-          <h1>Avènor</h1>
-        </div>
-        <div class="slogan-area">
-          <p class="tagline">Style that Sustains</p>
-          <p class="desc">Crafted with nature, designed for timeless harmony.</p>
-        </div>
+        <img src="images/logo.png" alt="Avenor Logo" class="hero-logo">
+        <h1 class="hero-heading">Avénor</h1>
       </div>
+    </section>
+
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1350&q=80" alt="Avénor Home Decor">
+        <div class="hero-text">
+            <h1>Style that Sustains</h1>
+            <p>Crafted with nature, designed for timeless harmony.</p>
+        </div>
     </section>
 
     <!-- About -->
