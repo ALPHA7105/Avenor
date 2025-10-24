@@ -171,12 +171,14 @@
 
         .hero-heading {
             font-family: 'Playfair Display', serif;
-            font-size: 5rem;             /* big, stylish title */
+            font-size: 5rem;
             font-weight: 700;
             color: #5c4a26;
             margin: 0;
-            letter-spacing: 1.8px;
-            line-height: 0.95;
+            line-height: 1;
+            max-width: 70vw;     /* heading will not exceed 70% of viewport width */
+            white-space: nowrap;  /* keep on one line, optional */
+            text-align: left;     /* optional: left-align next to logo */
         }
 
         .logo {
